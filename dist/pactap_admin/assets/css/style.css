@@ -26,6 +26,10 @@
 /*::-webkit-scrollbar-thumb:hover {
   background: #8cc2ff; 
 }*/
+
+:root{
+    --primary-green-color:#3e916c;
+}
 body {
     font-family: 'Poppins', sans-serif;
     color: #000;
@@ -80,6 +84,9 @@ select.form-control {
 
 .bg-light {
     background-color: #f6fbfe !important;
+}
+.pointer{
+    cursor: pointer !important;
 }
 
 img {
@@ -305,7 +312,15 @@ button:focus {
 .text-blue {
     color: #458DFC;
 }
-
+.text-12{
+    font-size: 12px;
+}
+.text-14{
+    font-size: 14px!important;
+}
+.text-10{
+    font-size: 10px;
+}
 .text-teal {
     color: #3FCCBA;
 }
@@ -3403,7 +3418,8 @@ p.passdInstrution {
 .ledger-bank-listing .edit-delete .edit-btn .btn { padding: 2px; display: inline-block;}
 .ledger-bank-listing .edit-btn .btn>img {vertical-align: bottom;}*/
 .table-card {
-    position: relative;
+    position: sticky;
+    top: 50px;
     background-color: #fff;
     border-radius: 12px;
     border: 1px solid #e5e5e5;
@@ -4732,7 +4748,7 @@ input[type='date'] {
 .viewText {
     color: #0095FF;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
 }
 
@@ -5213,9 +5229,9 @@ input[type='date'] {
     text-decoration: underline;
 }
 
-.request_sample .table tr td span {
+/* .request_sample .table tr td span {
     display: block;
-}
+} */
 
 .underline-none {
     text-decoration: none !important;
@@ -8390,6 +8406,10 @@ svg {
     background-color: #00D275 !important;
 }
 
+.bg-success{
+    background-color: var(--primary-green-color)!important;
+}
+
 .Expandcollapse_product_view {
     background-color: #F9F9F9;
     border-radius: 10px;
@@ -9175,4 +9195,106 @@ table.table {
     /* display: none; */
     z-index: 1;
   }
+
+  .login-white-box {
+    overflow: hidden; /* hides the scrollbar completely */
+}
+
+/* If you want to allow scrolling but only hide the scrollbar */
+.login-white-box {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+.login-white-box::-webkit-scrollbar { /* Chrome, Safari, Opera */
+    display: none;
+}
+
+
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 85px;
+    height: 30px;
+  }
+  
+  .switch input {display:none;}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ca2222;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2ab934;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px);
+  }
+  
+  /*------ ADDED CSS ---------*/
+  .on
+  {
+    display: none;
+  }
+  .off{
+    left: 64%;
+  }
+  .on{
+    left: 38%;
+  }
+  .on, .off
+  {
+    color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 52%;
+    font-weight: 500;
+    font-size: 10px;
+  }
+  
+  input:checked+ .slider .on
+  {display: block;}
+  
+  input:checked + .slider .off
+  {display: none;}
+  
+  /*--------- END --------*/
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;}
   
